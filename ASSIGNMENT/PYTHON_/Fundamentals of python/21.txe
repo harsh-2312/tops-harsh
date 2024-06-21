@@ -1,0 +1,12 @@
+ 1.How memory is managed in Python? 
+
+>> Python makes use of automatic memory management through garbage collection
+
+2.What is the purpose continue statement in python? 
+
+>> Continue The continue statement in Python is used to skip the remaining code inside a loop for
+  the current iteration only.
+
+3. What are negative indexes and why are they used? 
+>>  Negative indexing is used in Python to manipulate sequence objects such as lists, arrays, strings, etc.
+    Negative indexing retrieves elements from the end by providing negative numbers as sequence indexes. 
