@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add employee</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; 
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 100px;
+            border-radius: 100px;
+            box-shadow: 1 4 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: block;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
