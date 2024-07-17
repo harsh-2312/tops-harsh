@@ -1,0 +1,71 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<div class="main-content">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          {%if request.COOKIES.role == "Charman"%}
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addevents">
+            Add Notice
+          </button>
+          {% endif %}
+          
+          <!-- Modal -->
+          <div class="modal fade" id="addevents" tabindex="-1" aria-labelledby="addeventsLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="addeventsLabel">Add Notice details</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="" method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{form_notice.as_p}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save </button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+   
+          <h1> Notice Board</h1>
+          <form class="d-flex" role="search">
+            {% csrf_token %}
+            <input class="form-control me-2" type="search" name='search' placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+
+    {% for i in notice_data %}
+
+      <div class="card mb-3" style="max-width: 700px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+        {% if i.img %}
+          <img src="{{i.img.url}}" class="img-fluid rounded-start" alt="...">
+        {% else %}
+            No image available
+        {% endif %}
+            
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{i.title}}</h5>
+              <p class="card-text">{{i.description}}</p>
+              <p class="card-text"><small class="text-muted">{{i.created_at}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+      {%endfor%}
+    </div>
+
+
+
+{% endblock  %}
+

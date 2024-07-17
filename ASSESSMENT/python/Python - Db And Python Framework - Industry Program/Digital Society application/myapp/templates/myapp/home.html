@@ -1,0 +1,42 @@
+{% extends "myapp/base.html" %}
+    {% block content %}
+    <div class="main-content">
+
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Member</div>
+            <div class="card-body">
+              
+              <h5>Total Members <span class="badge bg-dark">{{total_member}}</span></h5>
+            </div>
+            
+    </div>
+
+    
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Watchman</div>
+      <div class="card-body">
+        
+        <h5>Total Watchman <span class="badge bg-dark">{{total_watchman}}</span></h5>
+      </div>
+            
+    </div>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Notice</div>
+      <div class="card-body">
+        
+        <h5>Total Notice <span class="badge bg-dark">{{total_notice}}</span></h5>
+      </div>
+            
+    </div>
+
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Event</div>
+      <div class="card-body">
+        
+        <h5>Total Event <span class="badge bg-dark">{{total_event}}</span></h5>
+      </div>
+            
+    </div>
+
+      </div>
+    {% endblock %}
