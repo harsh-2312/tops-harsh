@@ -1,0 +1,20 @@
+Q17 What are the different tags to separate sections of text?
+>> <div>: A generic container for grouping and styling sections of content. It has no semantic meaning by itself but is useful for layout purposes.
+
+<section>: Represents a generic section of a document, typically with a heading. It's used to group related content and is more semantic than <div>.
+
+<article>: Defines a self-contained piece of content that could be distributed or reused independently, like a blog post or news article.
+
+<header>: Represents introductory content or a set of navigational links. It usually contains headings and subheadings.
+
+<footer>: Represents the footer for a section or page, typically containing information like copyright, contact details, or related links.
+
+<nav>: Defines a section of navigation links, such as a menu or a set of links to other parts of the site.
+
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Header tags represent different levels of headings, with <h1> being the highest level and <h6> the lowest.
+
+<p>: Represents a paragraph of text. It's the most basic tag for separating blocks of text.
+
+<aside>: Represents content that is tangentially related to the content around it, like sidebars or call-out boxes.
+
+<main>: Represents the main content of the <body> element, excluding headers, footers, and sidebars.

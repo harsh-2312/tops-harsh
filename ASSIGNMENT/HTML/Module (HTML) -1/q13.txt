@@ -1,0 +1,7 @@
+Q13 What is the use of an iframe tag?
+>> The <iframe> (inline frame) tag in HTML is used to embed another HTML document within the current document. Essentially, it allows you to display a separate web page inside a section of your webpage. This is useful for embedding content from other sources, such as videos, maps, or other web applications.
+
+Key Attributes of <iframe>
+src: Specifies the URL of the page to be displayed within the iframe.
+
+<iframe src="https://www.example.com"></iframe>

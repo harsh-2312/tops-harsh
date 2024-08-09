@@ -1,0 +1,27 @@
+Q 15 How to insert a picture into a background image of a web page?  
+>> In this article, we will be adding an image as the background image of a web page. Background images are used to make a website more interactive and attractive. It can be applied in many stylings.
+
+Approach:
+
+In the body tag, specify a background image in the background attribute by passing the URL of the image or location path.
+Adding CSS styling properties.
+Syntax:
+
+<body background = "URL or path" > Website Body </body>
+Example 1: In this example, we will be going to add the background image using the above approach.
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <title>Website</title> 
+</head> 
+  
+<body background= 
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"> 
+    <h1>GeeksforGeeks</h1> 
+    <h2>Background Image</h2> 
+</body> 
+  
+</html>

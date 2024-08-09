@@ -1,0 +1,8 @@
+q12 How to create a Hyperlink in HTML?  
+>>   Creating a hyperlink in HTML is done using the <a> (anchor) tag. The href attribute within the <a> tag specifies the destination URL of the link. You can also add other attributes to customize the behavior and appearance of the link.
+
+Basic Syntax
+
+<a href="URL">Link Text</a>
+href: Specifies the URL of the page the link goes to.
+Link Text: The clickable text that users will see.

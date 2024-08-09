@@ -12,4 +12,3 @@
 # 2.) activate virtual environment
 # 3.) pip install django
 # 4.) django-admin startproject <project_name> .
-

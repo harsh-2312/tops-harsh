@@ -1,0 +1,24 @@
+Q16 How are active links different from normal links? 
+>> Normal Links:
+
+Definition: These are standard links defined using the <a> tag.
+Appearance: They typically have the default styling provided by the browser or any custom styles applied via CSS. By default, they are often blue and underlined.
+html
+Copy code
+<a href="https://example.com">Visit Example</a>
+
+
+>> Active Links:
+
+Definition: These represent the link that is currently being clicked or interacted with.
+Appearance: You can style active links differently using CSS to provide visual feedback that the link is in the process of being activated. This is usually done with the :active pseudo-class.
+html
+
+<a href="https://example.com">Visit Example</a>
+
+css
+
+a:active {
+  color: red; /* Changes the link color when it is being clicked */
+  background-color: yellow; /* Changes background color during the click */
+}

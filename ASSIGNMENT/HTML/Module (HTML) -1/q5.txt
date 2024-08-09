@@ -1,0 +1,9 @@
+Q5 What are different types of lists in HTML?  
+>> 1. Ordered List (<ol>)
+An ordered list is used when the order of the list items matters. The items are numbered automatically by the browser.
+
+>> 2. Unordered List (<ul>)
+An unordered list is used when the order of the items is not important. The items are marked with bullets by default.
+
+>> 3. Definition List (<dl>)
+A definition list is used to create a list of terms and their corresponding definitions. It’s useful for glossaries, descriptions, or any list where items have descriptions.

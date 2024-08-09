@@ -1,0 +1,25 @@
+Q 20 What are logical and physical tags in HTML?
+>> Logical (Semantic) Tags
+Logical tags describe the meaning or role of the content they enclose. They are used to provide context and structure, which helps with readability, SEO, and accessibility. Semantic tags improve the meaning and organization of the document.
+
+Examples of logical tags:
+
+<header>: Represents introductory content or a set of navigational links.
+<footer>: Represents the footer of a section or page.
+<article>: Defines a self-contained piece of content that can be distributed independently.
+<section>: Represents a thematic grouping of content, typically with a heading.
+<nav>: Defines a section of navigation links.
+<aside>: Represents content tangentially related to the content around it.
+<main>: Represents the dominant content of the <body>, excluding headers, footers, and sidebars.
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Define headings of different levels.
+Physical (Presentational) Tags
+Physical tags are used to define the appearance and formatting of content. They are focused on how the content looks rather than its meaning. Many presentational tags have been deprecated in favor of using CSS for styling.
+
+Examples of physical tags:
+
+<b>: Makes text bold.
+<i>: Makes text italic.
+<u>: Underlines text.
+<font>: Specifies font size, color, and family (deprecated; use CSS instead).
+<center>: Centers text (deprecated; use CSS instead).
+<strike>: Strikes through text (deprecated; use CSS instead).

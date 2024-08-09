@@ -1,0 +1,8 @@
+Q2 What are tags and attributes in HTML?  
+>> In HTML, tags and attributes are key concepts that help define the structure and presentation of a webpage.
+
+HTML Tags :
+Tags are the fundamental building blocks of an HTML document. They are used to create elements that define the structure and content of a webpage.
+
+HTML Attributes
+Attributes provide additional information about an element and are always included in the opening tag. Attributes are used to define properties or modify the behavior of an HTML element

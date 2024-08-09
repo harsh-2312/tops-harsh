@@ -1,0 +1,15 @@
+Q14 What is the use of a span tag? Explain with example?
+>> The <span> tag in HTML is an inline element used to group and style a portion of text or other inline elements within a document. Unlike block-level elements (like <div>), <span> does not create a new line or block, making it ideal for styling or manipulating small sections of content without affecting the layout of the surrounding elements.
+
+Key Uses of <span>:
+Styling Text: Apply CSS styles to a specific part of text within a paragraph or other inline elements.
+JavaScript Manipulation: Target specific sections of text or inline elements for dynamic changes or interactions.
+Grouping Inline Elements: Group multiple inline elements together for specific styling or scripting.
+Examples
+Styling Text
+
+You can use <span> to apply styles to a specific part of text within a block of content.
+
+HTML:
+
+<p>This is a <span class="highlight">highlighted</span> word in a paragraph.</p>

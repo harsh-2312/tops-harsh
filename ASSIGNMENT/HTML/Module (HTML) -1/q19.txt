@@ -1,0 +1,16 @@
+Q19 What is difference between HTML and XHTML? 
+>> XHTML
+XHTML stands for Extensible Hypertext Markup Language. It can be considered as a part of the XML markup language this is because XHTML has features of both XML and HTML. XHTML is extended from XML and HTML. XHTML can be considered as a better version of HTML. 
+
+Benefits
+Strict syntax: XHTML has a stricter syntax compared to HTML5, which means that it is more structured and easier to read.
+Standardization: XHTML follows the syntax rules of XML, which is a standardized markup language. This makes it easier to create interoperable web pages that work well with different web browsers and devices.
+Better for parsing: XHTML is easier to parse and process than HTML5, which makes it a better choice for developers who want to create web pages that can be easily processed by other software tools.
+
+>> HTML5
+HTML is the Hypertext Markup Language which is the most widely used language over the internet. HTML is used to create web pages and link them from one to another. Please note HTML is not a programming language, it is a markup language. We can use different other technologies as like CSS and javascript to give a new look to the pages developed by HTML. 
+
+Benefits
+Easier to code: HTML5 has a more relaxed syntax compared to XHTML, which makes it easier to code.
+Backward compatibility: HTML5 is designed to be backward compatible with older versions of HTML, which means that it can be used with older web browsers.
+Multimedia support: HTML5 includes support for multimedia elements such as video and audio, which makes it easier to create web pages that include multimedia content

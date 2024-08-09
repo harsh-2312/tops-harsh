@@ -1,0 +1,7 @@
+Q18  What is SVG? 
+>> SVG stands for Scalable Vector Graphics. It’s an XML-based format for describing two-dimensional vector graphics. Unlike raster images (like JPEGs or PNGs), which are made up of pixels, SVG graphics are composed of paths, shapes, and text, which makes them scalable without loss of quality.
+
+
+>> <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>

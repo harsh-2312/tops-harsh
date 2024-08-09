@@ -1,0 +1,9 @@
+Q10 .How can we club two or more rows or columns into a single row or column in an HTML 
+table? 
+>> In HTML tables, you can merge multiple rows or columns into a single row or column using the rowspan and colspan attributes. These attributes allow you to combine cells across rows or columns, respectively.
+
+1. Merging Columns (colspan Attribute)
+The colspan attribute specifies the number of columns a cell should span across. This is useful when you want a cell to cover more than one column.
+
+2. Merging Rows (rowspan Attribute)
+The rowspan attribute specifies the number of rows a cell should span across. This is useful when you want a cell to cover more than one row.

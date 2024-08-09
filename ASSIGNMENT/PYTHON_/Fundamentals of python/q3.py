@@ -10,5 +10,5 @@ for i in range(1,(num+1)-2):
     nextnumber=a+b
     a=b
     b=nextnumber
-    print(nextnumber,end=" ")
+    print(nextnumber,end="")
     
