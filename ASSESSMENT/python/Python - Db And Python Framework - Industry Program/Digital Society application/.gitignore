@@ -1,8 +1,8 @@
-# Ignore virtual environments
-/hvenv
+    # Ignore virtual environments
+    /hvenv
 
-# Ignore environment variables file
-.env
+    # Ignore environment variables file
+    .env
 
-# Ignore SQLite database file
-db.sqlite3
+    # Ignore SQLite database file
+    db.sqlite3
