@@ -1,4 +1,5 @@
 /hvenv
 
+.env
 
 db.sqlite3
