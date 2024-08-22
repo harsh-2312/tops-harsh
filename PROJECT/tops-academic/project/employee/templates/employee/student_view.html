@@ -1,0 +1,75 @@
+{% extends "employee/layout.html" %}
+
+{% block title %}
+Students
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-4">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <form class="d-flex" role="search" method="GET">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="col-md-4 text-end">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addstudent">
+        Add Student
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addstudent" tabindex="-1" aria-labelledby="addstudentLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addstudentLabel">Add student details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{student_form.as_p}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<table class="table ">
+      <tr class = 'table-dark my-3'>
+        <th scope="col">Student id</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Student number</th>
+        <th scope="col">Email</th>
+        <th scope="col">View</th>
+      </tr>
+      
+      {%for i in student %}
+      <tr>
+        <td>{{i.student_id}}</td>
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.email}}</td>
+        <td>
+          <a href="{% url "student_profile_view" student_id=i.student_id %}" class="text-dark">
+              <i class="bi bi-eye"></i>
+          </a>
+
+        
+      </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "employee/layout.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .profile-header {
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-name {
+            margin: 10px 0 5px;
+            font-size: 24px;
+            color: #333333;
+        }
+        .profile-title {
+            margin: 0;
+            font-size: 18px;
+            color: #666666;
+        }
+        .profile-details {
+            padding: 20px 0;
+        }
+        .profile-details h2 {
+            font-size: 20px;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .profile-details p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        .profile-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .profile-details ul li {
+            font-size: 16px;
+            color: #666666;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="profile-container">
+    <div class="profile-header">
+       
+        <h1 class="profile-name">{{request.COOKIES.employee_name }}</h1>
+        <p class="profile-title">{{request.COOKIES.role}}</p>
+    </div>
+    <div class="profile-details"> 
+        <p>Hello! I am John Doe, a passionate web developer with experience in creating dynamic and responsive websites. I love coding and am always eager to learn new technologies.</p>
+        <h2>Contact Information</h2>
+        <ul>
+            <li>Email: johndoe@example.com</li>
+            <li>Phone: (123) 456-7890</li>
+            <li>Location: City, Country</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}

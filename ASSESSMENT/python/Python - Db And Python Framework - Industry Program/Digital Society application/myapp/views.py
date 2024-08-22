@@ -5,16 +5,21 @@ from django.core.mail import send_mail
 from functools import wraps
 from django.contrib import messages
 
-# Create your views here.
+
+
 
 def login_required(function):
     @wraps(function)
-    def wrapped_func(request,*args, **kwargs):
-        if(request.COOKIES.get("Charmans") and request.COOKIES.get("role")) or (request.COOKIES.get("Member") and request.COOKIES.get("role") )or(request.COOKIES.get("Watcman") and request.COOKIES.get("role")):
-            return function(request,*args, **kwargs)
-        return wrapped_func
+    def wrapped_func(request, *args, **kwargs):
+        if (request.COOKIES.get("charman_id") and request.COOKIES.get("role")) or (request.COOKIES.get("member_id") and request.COOKIES.get("role"))or (request.COOKIES.get("Watchmen_id") and request.COOKIES.get("role")):
+            return function(request, *args, **kwargs)
+        else:
+            return redirect('login_view')
+    
+    return wrapped_func
+
         
-# @login_required
+@login_required
 def home(request):
     total_member = society_member.objects.count()
     total_watchman = SocietyWatchmen.objects.count()
@@ -28,9 +33,6 @@ def home(request):
         'total_event':total_event
     }
     return render(request,'myapp/home.html',context)
-
-def singup_view(request):
-    return render(request,'myapp/singup.html')
 
 
 def login_view(request):
@@ -48,7 +50,8 @@ def login_view(request):
                     response.set_cookie('name',get_member.name)
                     return response
                 else:
-                    pass
+                    messages.error(request,'password not find')
+                    
 
             get_watchman= SocietyWatchmen.objects.filter(Watchmen_id=username_).first()
             if get_watchman:
@@ -59,19 +62,18 @@ def login_view(request):
                     response.set_cookie('name',get_watchman.name)
                     return response
                 else:
-                    print("note")
+                    messages.error(request,'password not find')
             
             get_charmans =charman.objects.filter(charman_id=username_).first()
             if get_charmans:
                 if get_charmans.password == password_:
-                    print('song')
                     response = redirect("home")
                     response.set_cookie('role',get_charmans.role)
                     response.set_cookie('charman_id',get_charmans.charman_id)
                     response.set_cookie('name',get_charmans.name)
                     return response
                 else:
-                    print('hello')
+                    messages.error(request,'password not find')
                 
             return redirect('login_view')
         
@@ -113,10 +115,6 @@ def forgot_password_(request):
     return render(request,"myapp/forgot_password.html")
 
 # @login_required
-def change_password_(request):
-    return render(request, "myapp/change_p.html")
-
-# @login_required
 def profile(request):
     if request.COOKIES.get("role") == "Charmans":
         data = charman.objects.get(charman_id = request.COOKIES.get('charman_id'))
@@ -138,7 +136,7 @@ def profile(request):
             return redirect("profile")
         else:
             form=member_profile(instance=data)
-    elif request.COOKIES.get("role")=="Watcman":
+    elif request.COOKIES.get("role")=="Watchman":
         data = SocietyWatchmen.objects.get(Watchmen_id=request.COOKIES.get("Watchmen_id"))
         form = watchman_form(request.POST,instance=data)
         if request.method=="POST":
@@ -261,8 +259,10 @@ def events_view(request):
         form_events = event_form(request.POST,request.FILES)
         form_events.is_valid()
         form_events.save()
+        return redirect('events_view')
     else:
         form_events = event_form()
+
     if request.GET.get("search"):
         event_data=Event.objects.filter(title__icontains=request.GET.get('search'))
 
@@ -289,6 +289,5 @@ def visitor_view(request):
         'visitor_data':visitor_data,
         'form_visitor':form_visitor,
         'visitor_search':visitor_data
-
     }
     return render(request,'myapp/visitor.html',context)

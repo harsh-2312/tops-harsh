@@ -5,7 +5,7 @@ urlpatterns = [
     path('home',views.home,name='home'),
     path('',views.login_view,name='login_view'),
     path('logout/',views.logout,name='logout'),
-    path('singup',views.singup_view,name='singup_view'),
+    # path('singup',views.singup_view,name='singup_view'),
     path('profil/',views.profile,name='profile'),
     path('member/',views.member,name='member'),
     path('delete-member/<id>/',views.delete_member,name='delete_member'),
@@ -16,6 +16,5 @@ urlpatterns = [
     path('event-view/',views.events_view,name="events_view"),
     path('visitor-view',views.visitor_view,name='visitor_view'),
     path('forgot-password/',views.forgot_password_,name='forgot_password_'),
-    path('changepassword/',views.change_password_,name='change_password_'),
-    # path('chak',views.login_required,name="login_required")
+    # path('changepassword/',views.change_password_,name='change_password_'),
 ]

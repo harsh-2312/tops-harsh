@@ -10,6 +10,7 @@
 <h3>Role : {{request.COOKIES.role}}</h3>
 <h3>Name : {{data.name}}</h3>
 <h3>User id : {{request.COOKIES.charman_id}}</h3>
+<h3>Email : {{data.email}}</h3>
 
 {% elif request.COOKIES.role == "Member" %}
 <h3>Role : {{request.COOKIES.role}}</h3>
@@ -20,7 +21,8 @@
 {% elif request.COOKIES.role == "Watchman" %}
 <h3>Role : {{request.COOKIES.role}}</h3>
 <h3>Name : {{data.name}}</h3>
-<h3>User id : {{request.COOKIES.Watchman_id}}</h3>
+<h3>User id : {{request.COOKIES.Watchmen_id}}</h3>
+<h3>Number : {{data.number}}</h3>
 
 {% endif %}
 

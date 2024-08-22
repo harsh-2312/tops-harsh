@@ -63,7 +63,7 @@ def task_details(request,id):
             "status": status.HTTP_400_BAD_REQUEST,
             "error":serializer.errors
         })
-    
+
     if request.method=="PATCH":
         jsondata = request.data
         serializer = Taskserializer(task_data,data=jsondata,partial=True)
@@ -84,7 +84,6 @@ def task_details(request,id):
         return Response({
             "status": status.HTTP_410_GONE,
             "message" : "data delete"
-
         })
 
 
